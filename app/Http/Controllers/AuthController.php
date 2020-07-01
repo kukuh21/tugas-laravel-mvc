@@ -11,8 +11,13 @@ class AuthController extends Controller
         return view('register');
     }
 
-    public function welcome()
+    public function welcome(Request $request)
     {
-        return view('welcome');
+        $firstname = $request->first_name;
+        $lastname = $request->last_name;
+        return view('welcome', [
+            'firstname' => $firstname,
+            'lastname' => $lastname
+        ]);
     }
 }
