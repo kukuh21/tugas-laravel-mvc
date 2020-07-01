@@ -18,4 +18,4 @@
 
 Route::get('/','HomeController@home')->name('home');
 Route::get('/register','AuthController@register')->name('register');
-Route::get('/welcome','AuthController@welcome')->name('welcome');
+Route::post('/welcome','AuthController@welcome')->name('welcome');
