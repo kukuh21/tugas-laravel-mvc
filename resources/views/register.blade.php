@@ -6,6 +6,8 @@
   <title>Sanber Book</title>
 </head>
 <body>
+  <form action="{{ route('welcome') }}" method="POST">
+    @csrf @method("POST")
   <h1>Buat Account Baru!</h1>
   <h3>Sign Up Form</h3>
     <p>First Name:</p>
@@ -42,7 +44,7 @@
     <p>Bio</p>
     <textarea name="bio" id="bio" cols="30" rows="6"></textarea>
     <br>
-    <a href="{{ route('welcome') }}"><button type="button">Submit</button></a>
+    <button type="submit">Submit</button>
   </form>
 </body>
 </html>
